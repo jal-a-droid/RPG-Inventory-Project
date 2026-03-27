@@ -17,10 +17,17 @@ public abstract class Bag{
         System.out.println("You have added a bag!\n You now have "+ num + " bags!");
     }
 
+
+
+
     public void addToolBag(int i, Tools tool){
         toolInventory.put(i, tool);
         capacity--;
         System.out.println("You have added an item!");
+    }
+
+    public static String getToolMap(){
+        return toolInventory.toString();
     }
 
     public void emptyTools(){

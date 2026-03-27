@@ -36,3 +36,28 @@ public class Tools {
         System.out.println("You have written!");
     }
 }
+
+class healConsumable extends Tools{
+    static int quantity = 1;
+    static Boolean contHeal = false;
+    public healConsumable(String name, String type, String effect) {
+        super(name, type, effect);
+    }
+
+    public void consume(){
+        System.out.println("You have consumed the healing fruit. You are now continuously healing!");
+        contHeal = true;
+    }
+}
+
+class questKey extends Tools{
+    static int quantity = 1;
+    public questKey(String name, String type, String effect) {
+        super(name, type, effect);
+    }
+
+    public void useKey(){
+        System.out.println("You have used the Quest Key to open the Quest Chest!");
+        quantity--;
+    }
+}

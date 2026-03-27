@@ -4,10 +4,10 @@ public class Weapons {
     protected String type = "tool";
     protected String damage = "no effect";
 
-    public Weapons(String name, String type, String effect){
+    public Weapons(String name, String type, String damage){
         this.name = name;
         this.type = type;
-        this.damage = effect;
+        this.damage = damage;
     }
 
     public Weapons(String name, int health, String type, String damage){
@@ -32,4 +32,16 @@ public class Weapons {
     public void dropWeapon(){
 
     }
+}
+
+class projectile extends Weapons{
+    static int quantity = 3;
+    public projectile(String name, String type, String damage) {
+        super(name, type, damage);
+    }
+    public void shoot(){
+        System.out.println("You have shot your projectile. You have delt " + damage + " damage!");
+        quantity--;
+    }
+
 }
